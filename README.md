@@ -33,9 +33,9 @@ Key objectives include:
 ## 🧠 System Architecture
 
 1. IoT Layer: Smart bins equipped with ultrasonic sensors and microcontrollers (e.g., Arduino/NodeMCU) send data to the server via Wi-Fi.
-2. Server Layer: A backend service (Node.js/Express.js) stores data and processes incoming sensor readings.
-3. AI Layer: Python-based algorithms optimize routes and analyze collection efficiency.
-4. Frontend Layer: A web dashboard built with HTML, CSS, and JavaScript for visualization and control.
+2. Server Layer: A backend service (Spring Boot) stores data and processes incoming sensor readings.
+3. AI Layer: Prioritization based logic optimize routes and analyze collection efficiency.
+4. Frontend Layer: A web dashboard built with HTML, CSS, JavaScript and React for visualization and control.
 
 ---
 
@@ -43,12 +43,11 @@ Key objectives include:
 
 | Component            | Technology                                         |
 | -------------------- | -------------------------------------------------- |
-| **Frontend**         | HTML, CSS, JavaScript (React.js optional)          |
-| **Backend**          | Node.js, Express.js                                |
-| **Database**         | MySQL / Firebase                                   |
+| **Frontend**         | HTML, CSS, JavaScript, React.js                    |
+| **Backend**          | Spring Boot                                        |
+| **Database**         | MySQL                                              |
 | **IoT Devices**      | Arduino / NodeMCU, Ultrasonic Sensor, Wi-Fi Module |
-| **AI Algorithms**    | Python (for optimization & analytics)              |
-| **Simulation Tools** | Proteus / ThingSpeak / Blynk (for IoT testing)     |
+| **AI Algorithms**    | Prioritization logic                               |
 
 ---
 
@@ -56,9 +55,8 @@ Key objectives include:
 
 ### Prerequisites
 
-* Node.js & npm installed
+* React & npm installed
 * MySQL database configured
-* Python 3.x installed (for AI module)
 
 ### Steps
 
