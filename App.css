@@ -1,0 +1,435 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #f4f7fb;
+  color: #0f172a;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+.topbar {
+  background: white;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  background: #2563eb;
+  color: white;
+  border-radius: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.brand p {
+  margin: 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.login-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.layout {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+  width: 220px;
+  background: linear-gradient(180deg, #020617, #0f172a);
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+}
+
+.sidebar h4 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  color: #94a3b8;
+}
+
+.sidebar button {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #e5e7eb;
+  padding: 12px 14px;
+  border-radius: 14px;
+  text-align: left;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.sidebar button.active {
+  background: #2563eb;
+  color: white;
+}
+
+.sidebar button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   CONTENT
+========================= */
+.content {
+  flex: 1;
+}
+
+/* =========================
+   KPI CARDS
+========================= */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.kpi {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.kpi span {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: white;
+}
+
+.kpi.green span { background: #16a34a; }
+.kpi.red span { background: #ef4444; }
+.kpi.blue span { background: #0284c7; }
+
+.kpi h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.kpi p {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* =========================
+   MAP CARD
+========================= */
+.map-card {
+  background: white;
+  border-radius: 20px;
+  padding: 10px;
+  height: 420px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+/* =========================
+   ADD BIN CARD
+========================= */
+.add-card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.form-row input {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.form-row button {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* =========================
+   TABLE
+========================= */
+.table-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #f1f5f9;
+  padding: 12px;
+  font-size: 13px;
+  color: #334155;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+.status {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.ok {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status.partial {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status.full {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+/* FILTER BAR */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.filters input {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 150px;
+}
+
+/* TABLE */
+.bin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.bin-table th,
+.bin-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.bin-table th {
+  background: #f5f7fa;
+  font-weight: 600;
+}
+
+.delete-btn {
+  background: #e53935;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #c62828;
+}
+
+/* STATUS COLORS */
+.status.ok {
+  color: green;
+  font-weight: bold;
+}
+
+.status.near_full {
+  color: orange;
+  font-weight: bold;
+}
+
+.status.full {
+  color: red;
+  font-weight: bold;
+}
+/* ================= LOGIN CARD ================= */
+.add-card {
+  background: #ffffff;
+  padding: 24px 28px;
+  border-radius: 12px;
+  width: 360px;
+  margin: 40px auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.add-card h3 {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.add-card input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  transition: border 0.2s;
+}
+
+.add-card input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.add-card button {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.add-card button:first-of-type {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.add-card button:first-of-type:hover {
+  background: #1e40af;
+}
+
+.add-card button:last-of-type {
+  background: #e5e7eb;
+}
+
+.add-card button:last-of-type:hover {
+  background: #d1d5db;
+}
+/* ================= FILTER BAR ================= */
+.table-card {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.table-card input {
+  padding: 8px 10px;
+  margin-right: 8px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+.table-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-card th {
+  text-align: left;
+  font-size: 13px;
+  color: #374151;
+  border-bottom: 2px solid #e5e7eb;
+  padding: 10px;
+}
+
+.table-card td {
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.table-card tr:hover {
+  background: #f9fafb;
+}
+
+button.delete {
+  background: #dc2626;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+button.delete:hover {
+  background: #b91c1c;
+}
