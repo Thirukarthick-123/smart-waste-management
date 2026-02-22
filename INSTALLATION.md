@@ -10,9 +10,20 @@ Ensure you have the following installed:
 3. **Git**: [Download](https://git-scm.com/)
 4. **Internet Connection**: Required for MQTT broker and Map tiles.
 
+## 🚀 Quick Launch (Recommended for Windows)
+
+The easiest way to run the project is using the automated starter:
+
+1.  **Double-click `run_project.bat`** in the root directory.
+2.  The script will automatically:
+    - Verify Java & Node.js.
+    - Install missing dependencies.
+    - Start the Backend (8080) and Frontend (3000) in new windows.
+    - Open the dashboard in your browser.
+
 ---
 
-## 🏗️ 1. Backend Setup (Spring Boot)
+## 🏗️ Manual Setup (Alternative)
 
 1. Open a terminal in the project root.
 2. Build and run the backend using the Maven wrapper:

@@ -22,7 +22,16 @@ A premium, real-time waste management solution featuring AI-driven route optimiz
 | **IoT/Sim** | ESP32 (Firmware), Wokwi Simulator, MQTT (EMQX Broker) |
 | **Routing** | OSRM (Open Source Routing Machine) API |
 
-## 📖 documentation
+## 🚀 Quick Start (Windows)
+
+Simply double-click **`run_project.bat`** in the root folder. 
+This will:
+1. Verify Java & Node.js installation.
+2. Install dependencies (`npm install`).
+3. Start the Backend and Frontend in separate windows.
+4. Auto-open http://localhost:3000 in your browser.
+
+## 📖 Documentation
 
 - [Installation & Setup Guide](INSTALLATION.md)
 - [System Walkthrough & Testing](.system_generated/walkthrough.md)
