@@ -1,0 +1,100 @@
+{
+    "version": 1,
+    "author": "Smart Waste Project",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "board-esp32-devkit-v1",
+            "id": "esp",
+            "top": 0,
+            "left": 0,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-hc-sr04",
+            "id": "ultrasonic",
+            "top": -120,
+            "left": 120,
+            "attrs": {
+                "distance": "100"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led1",
+            "top": 50,
+            "left": 250,
+            "attrs": {
+                "color": "blue"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "res1",
+            "top": 40,
+            "left": 150,
+            "attrs": {
+                "value": "220"
+            }
+        }
+    ],
+    "connections": [
+        [
+            "esp:GND.1",
+            "ultrasonic:GND",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "esp:VIN",
+            "ultrasonic:VCC",
+            "red",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "esp:D5",
+            "ultrasonic:TRIG",
+            "green",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "esp:D18",
+            "ultrasonic:ECHO",
+            "orange",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "esp:D2",
+            "res1:1",
+            "blue",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "res1:2",
+            "led1:A",
+            "blue",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "esp:GND.2",
+            "led1:C",
+            "black",
+            [
+                "v0"
+            ]
+        ]
+    ],
+    "dependencies": {}
+}

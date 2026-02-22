@@ -1,124 +1,32 @@
-# 🗑️ Smart Waste Management System with IoT Simulation and AI Optimization
+# AI-Based Smart Waste Management System
 
-## 📘 Project Overview
+A premium, real-time waste management solution featuring AI-driven route optimization, high-fidelity road-network mapping (OSRM), and IoT-integrated bin monitoring.
 
-The Smart Waste Management System with IoT Simulation and AI Optimization is an academic project designed to improve the efficiency of waste collection and monitoring using Internet of Things (IoT) and **Artificial Intelligence (AI) technologies.
+## 🚀 Key Features
 
-Conventional waste management practices are labor-intensive, inefficient, and costly. This project proposes a smart and sustainable solution by integrating IoT-enabled sensors to track waste bin fill levels and employing AI-based algorithms to plan optimal collection routes. The system ensures efficient resource utilization, reduced fuel consumption, and a cleaner environment.
+- **AI Route Optimization**: Automatically calculates the most efficient collection path using a Nearest-Neighbor algorithm.
+- **Road-Network Visualization**: Uses OSRM API to display actual road paths instead of straight lines.
+- **Real-Time IoT Monitoring**: 1-second telemetry updates from ESP32/Wokwi via MQTT.
+- **Role-Based Dashboards**:
+  - **Admin**: Full control over bin management, analytics, and alerts.
+  - **Worker**: Specialized view for collection tasks and navigation.
+  - **Public**: Transparency view for citizens to see bin status.
+- **Glassmorphism UI**: High-end modern aesthetic with live status indicators and micro-animations.
 
----
+## 🛠️ Technology Stack
 
-## 🎯 Purpose
+| Layer      | Technology |
+| ----------- | ----------- |
+| **Backend** | Java 17, Spring Boot, Spring Security, JPA/Hibernate, H2 Database |
+| **Frontend** | React, Vite, Leaflet Maps, Axios, CSS3 (Glassmorphism) |
+| **IoT/Sim** | ESP32 (Firmware), Wokwi Simulator, MQTT (EMQX Broker) |
+| **Routing** | OSRM (Open Source Routing Machine) API |
 
-The primary goal of this project is to develop a centralized smart waste management platform that automates and optimizes waste collection and disposal processes.
-Key objectives include:
+## 📖 documentation
 
-* Real-time monitoring of waste bins using IoT sensors.
-* AI-based route optimization for collection vehicles.
-* Data-driven analytics for performance assessment.
-* Reduction in manual intervention and environmental impact.
+- [Installation & Setup Guide](INSTALLATION.md)
+- [System Walkthrough & Testing](.system_generated/walkthrough.md)
 
----
+## 🤝 Contributing
 
-## ⚙️ Features
-
-* 📡 IoT Integration:** Smart sensors monitor bin fill levels in real time.
-* 🤖 AI Optimization:** Intelligent algorithms plan efficient collection routes.
-* 💻 Web Dashboard:** Centralized interface for administrators to monitor and manage operations.
-* 📊 Data Analytics:** Reports and insights for decision-making and performance evaluation.
-* 🌱 Sustainability:** Reduced fuel usage, labor, and carbon footprint.
-
----
-
-## 🧠 System Architecture
-
-1. IoT Layer: Smart bins equipped with ultrasonic sensors and microcontrollers (e.g., Arduino/NodeMCU) send data to the server via Wi-Fi.
-2. Server Layer: A backend service (Spring Boot) stores data and processes incoming sensor readings.
-3. AI Layer: Prioritization based logic optimize routes and analyze collection efficiency.
-4. Frontend Layer: A web dashboard built with HTML, CSS, JavaScript and React for visualization and control.
-
----
-
-## 🧩 Tech Stack
-
-| Component            | Technology                                         |
-| -------------------- | -------------------------------------------------- |
-| **Frontend**         | HTML, CSS, JavaScript, React.js                    |
-| **Backend**          | Spring Boot                                        |
-| **Database**         | MySQL                                              |
-| **IoT Devices**      | Arduino / NodeMCU, Ultrasonic Sensor, Wi-Fi Module |
-| **AI Algorithms**    | Prioritization logic                               |
-
----
-
-## 🚀 Installation & Setup
-
-### Prerequisites
-
-* React & npm installed
-* MySQL database configured
-
-### Steps
-
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/<your-username>/smart-waste-iot-ai-system.git
-   cd smart-waste-iot-ai-system
-   ```
-
-2. **Install backend dependencies**
-
-   ```bash
-   npm install
-   ```
-
-3. **Configure database connection**
-   Update database credentials in the configuration file.
-
-4. **Run the backend server**
-
-   ```bash
-   npm start
-   ```
-
-5. **Run the AI optimization script (optional)**
-
-   ```bash
-   python ai_optimizer.py
-   ```
-
-6. **Access the web interface**
-   Open your browser and go to:
-
-   ```
-   http://localhost:3000
-   ```
-
----
-
-## 📊 Expected Outcomes
-
-* Improved waste collection efficiency.
-* Reduced fuel and operational costs.
-* Real-time monitoring and analytics.
-* Smarter and cleaner urban environments.
-
----
-
-## 👨‍💻 Contributors
-
-* Ratnesh Kumar Raja — Project Developer
-* [Ayush Tyagi, Mayank Chaudhary, Aayush Singla, Sweekar Chougale- Teammates
-
----
-
-## 📚 Academic Context
-
-This project was developed as part of an academic initiative to apply IoT and AI technologies for sustainable urban development. It demonstrates how intelligent systems can automate traditional processes and promote **environmental sustainability** through innovation.
-
----
-
-## 🏁 Conclusion
-
-The Smart Waste Management System with IoT Simulation and AI Optimization is a step toward modernizing waste management infrastructure. By leveraging technology, it achieves automation, efficiency, and sustainability, aligning with the vision of Smart Cities.
+Contributions are welcome! Please feel free to submit a Pull Request.
