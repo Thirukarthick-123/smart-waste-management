@@ -27,14 +27,21 @@ export default function Login({ onSuccess, onClose }) {
 
   return (
     <div className="add-card">
-      <h3>Admin Login</h3>
+      <h3>Staff Login</h3>
+      <p style={{marginBottom: "10px", fontSize: "0.9em", color: "#888"}}>Choose your role to auto-fill credentials:</p>
+      
+      <div style={{display: "flex", gap: "10px", marginBottom: "15px"}}>
+        <button onClick={() => {setUsername("admin"); setPassword("admin123");}} style={{flex: 1, background: "#10b981", color: "white"}}>Admin</button>
+        <button onClick={() => {setUsername("worker"); setPassword("worker123");}} style={{flex: 1, background: "#3b82f6", color: "white"}}>Worker</button>
+      </div>
 
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p style={{ color: "red", marginBottom: "10px" }}>{error}</p>}
 
       <input
         placeholder="Username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
+        style={{marginBottom: "10px", width: "100%", boxSizing: "border-box"}}
       />
 
       <input
@@ -42,12 +49,13 @@ export default function Login({ onSuccess, onClose }) {
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        style={{marginBottom: "15px", width: "100%", boxSizing: "border-box"}}
       />
 
-      <button onClick={handleLogin}>Login</button>
+      <button onClick={handleLogin} style={{width: "100%", marginBottom: "10px"}}>Login</button>
 
       {onClose && (
-        <button onClick={onClose} style={{ marginLeft: "10px" }}>
+        <button onClick={onClose} style={{ width: "100%", background: "#4b5563" }}>
           Cancel
         </button>
       )}

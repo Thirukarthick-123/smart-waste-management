@@ -66,7 +66,7 @@ function App() {
             <h2>Smart Waste Management</h2>
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
               <p>
-                {isAdmin() ? "Admin Console" : isWorker() ? "Worker Dashboard" : "Public Transparency Dashboard"}
+                {isAdmin() ? "Admin Console" : isWorker() ? "Worker Dashboard" : "Public Transparency Dashboard"} {isLoggedIn() && `(Logged in as ${localStorage.getItem("role")})`}
               </p>
               <div className="live-indicator">
                 <div className="dot"></div>
@@ -83,7 +83,7 @@ function App() {
           </button>
         ) : (
           <button className="login-btn" onClick={() => setShowLogin(true)}>
-            Admin Login
+            Staff Login
           </button>
         )}
       </header>

@@ -11,7 +11,7 @@ echo.
 :: 1. Check for Java
 java -version >nul 2>&1
 if %errorlevel% neq 0 (
-    echo ❌ Error: Java (JDK 17+) is NOT installed or not in PATH.
+    echo ❌ Error: Java [JDK 17+] is NOT installed or not in PATH.
     echo Please install JDK 17 from https://adoptium.net/
     pause
     exit /b
